@@ -5,6 +5,7 @@ import type {
   RagQueryRequest,
   RagQueryResponse,
 } from '../types/api'
+import type { TestingStatusResponse, TrainingStartResponse } from '../types/testing'
 
 const api = axios.create({
   baseURL: '/api/v1',
@@ -22,3 +23,9 @@ export const fetchDesigns = () =>
 
 export const healthCheck = () =>
   api.get('/health').then(r => r.data)
+
+export const getTestingStatus = (): Promise<TestingStatusResponse> =>
+  api.get<TestingStatusResponse>('/testing/status').then(r => r.data)
+
+export const startModelTraining = (): Promise<TrainingStartResponse> =>
+  api.post<TrainingStartResponse>('/testing/train').then(r => r.data)
