@@ -1,0 +1,42 @@
+quarkus:
+  application:
+    name: be-platform
+  http:
+    port: 8080
+    cors:
+      ~: true
+      origins: "http://localhost:3000,http://localhost:5173"
+      methods: "GET,POST,PUT,DELETE,OPTIONS"
+      headers: "Content-Type,Authorization"
+  datasource:
+    db-kind: postgresql
+    username: ${DB_USER:beuser}
+    password: ${DB_PASSWORD:bepassword}
+    jdbc:
+      url: ${DB_URL:jdbc:postgresql://localhost:5432/beplatform}
+  hibernate-orm:
+    database:
+      generation: update
+    log:
+      sql: false
+  smallrye-openapi:
+    path: /openapi
+    info-title: "BE Platform API"
+    info-version: "1.0.0"
+    info-description: "AI Platform for Bioequivalence Research Automation (Oncology)"
+  swagger-ui:
+    always-include: true
+    path: /swagger-ui
+  log:
+    level: INFO
+    category:
+      "com.bioequivalence":
+        level: DEBUG
+
+gigachat:
+  api-url: ${GIGACHAT_API_URL:https://gigachat.devices.sberbank.ru/api/v1}
+  auth-url: ${GIGACHAT_AUTH_URL:https://ngw.devices.sberbank.ru:9443/api/v2/oauth}
+  client-id: ${GIGACHAT_CLIENT_ID:}
+  client-secret: ${GIGACHAT_CLIENT_SECRET:}
+  scope: ${GIGACHAT_SCOPE:GIGACHAT_API_PERS}
+  model: ${GIGACHAT_MODEL:GigaChat}

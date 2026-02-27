@@ -1,0 +1,103 @@
+[
+  {
+    "id": "SYN-001",
+    "drugName": "Sorafenib 200mg tablet (Generic vs Nexavar)",
+    "input": {
+      "cvIntra": 42.3,
+      "halfLife": 48,
+      "foodEffect": true,
+      "power": 0.80,
+      "alpha": 0.05,
+      "dropoutRate": 0.15,
+      "screenFailRate": 0.20
+    },
+    "output": {
+      "design": "REPLICATE_DESIGN",
+      "rsabeDecision": "APPLICABLE",
+      "nRandomized": 64,
+      "nScreened": 92,
+      "washoutDays": 10,
+      "lowerBound": 74.5,
+      "upperBound": 134.2,
+      "foodEffect": "FASTING_AND_FED",
+      "regulatoryCompliance": ["EEK_85", "EMA", "FDA"]
+    },
+    "synopsis": "Открытое рандомизированное перекрёстное исследование БЭ Сорафениба 200 мг (дженерик) vs Нексавар (референт) с применением RSABE в реплицированном 4-периодном дизайне. N рандомизации: 64 субъекта (по 32 в каждой последовательности). N скрининга: 92 субъекта. Washout: 10 дней. Два исследования: натощак + после еды. Соответствие: ЕЭК №85, EMA, FDA."
+  },
+  {
+    "id": "SYN-002",
+    "drugName": "Imatinib 400mg tablet (Generic vs Gleevec)",
+    "input": {
+      "cvIntra": 20.1,
+      "halfLife": 18,
+      "foodEffect": false,
+      "power": 0.80,
+      "alpha": 0.05,
+      "dropoutRate": 0.10,
+      "screenFailRate": 0.15
+    },
+    "output": {
+      "design": "TWO_WAY_CROSSOVER",
+      "rsabeDecision": "NOT_APPLICABLE",
+      "nRandomized": 20,
+      "nScreened": 26,
+      "washoutDays": 3.75,
+      "lowerBound": 80.0,
+      "upperBound": 125.0,
+      "foodEffect": "FASTING_ONLY",
+      "regulatoryCompliance": ["EEK_85", "EMA", "FDA"]
+    },
+    "synopsis": "Открытое рандомизированное перекрёстное 2×2 исследование БЭ Иматиниба 400 мг (дженерик) vs Гливек (референт). N рандомизации: 20 субъектов. N скрининга: 26 субъектов. Стандартный критерий 80-125%. Washout: 3.75 дней. Исследование натощак. Соответствие: ЕЭК №85."
+  },
+  {
+    "id": "SYN-003",
+    "drugName": "Cabozantinib 60mg tablet (Generic vs Cabometyx)",
+    "input": {
+      "cvIntra": 41.5,
+      "halfLife": 99,
+      "foodEffect": true,
+      "power": 0.80,
+      "alpha": 0.05,
+      "dropoutRate": 0.20,
+      "screenFailRate": 0.25
+    },
+    "output": {
+      "design": "REPLICATE_DESIGN",
+      "rsabeDecision": "APPLICABLE",
+      "nRandomized": 60,
+      "nScreened": 100,
+      "washoutDays": 20.6,
+      "lowerBound": 74.2,
+      "upperBound": 134.8,
+      "foodEffect": "FASTING_AND_FED",
+      "washoutWarning": "КРИТИЧНО: t½=99ч. Washout=21 день. Для онкопрепаратов с t½>72ч рекомендован параллельный дизайн.",
+      "regulatoryCompliance": ["EEK_85", "EMA"]
+    },
+    "synopsis": "Реплицированный дизайн с применением RSABE. Критически длительный t½=99ч требует washout ≥21 день. N рандомизации: 60. N скрининга: 100. Два исследования: натощак + после еды. Рекомендовано рассмотреть параллельный дизайн."
+  },
+  {
+    "id": "SYN-004",
+    "drugName": "Temozolomide 100mg capsule (Generic vs Temodar)",
+    "input": {
+      "cvIntra": 18.4,
+      "halfLife": 1.8,
+      "foodEffect": true,
+      "power": 0.90,
+      "alpha": 0.05,
+      "dropoutRate": 0.10,
+      "screenFailRate": 0.15
+    },
+    "output": {
+      "design": "TWO_WAY_CROSSOVER",
+      "rsabeDecision": "NOT_APPLICABLE",
+      "nRandomized": 24,
+      "nScreened": 31,
+      "washoutDays": 0.375,
+      "lowerBound": 80.0,
+      "upperBound": 125.0,
+      "foodEffect": "FASTING_AND_FED",
+      "regulatoryCompliance": ["EEK_85", "FDA"]
+    },
+    "synopsis": "Стандартный 2×2 crossover. Мощность 90%. N рандомизации: 24. Два исследования из-за food effect (BCS класс III). Washout: 9 часов (адекватно для t½=1.8ч). Соответствие: ЕЭК №85, FDA."
+  }
+]
